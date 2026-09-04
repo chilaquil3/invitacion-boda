@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+  Vanesa & Diego Armando | Nuestra Boda
+</title>
+
+<meta
+  name="description"
+  content="Vanesa & Diego Armando — El día de nuestra boda"
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+  rel="preconnect"
+  href="https://fonts.googleapis.com"
+  crossorigin
+>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;1,400&family=Great+Vibes&display=swap"
+  rel="stylesheet"
+>
+
+
+<style>
+
+:root{
+  --ivory:#faf6ef;
+  --ivory-deep:#f1e9d8;
+  --paper:#fffdf8;
+
+  --ink:#2c2620;
+  --ink-soft:#55483a;
+
+  --gold:#a9812f;
+  --gold-light:#c9a86a;
+  --gold-pale:rgba(169,129,47,.20);
+
+  --rose:#b8836f;
+  --rose-light:#d3aa99;
+
+  --line:rgba(169,129,47,.35);
+}
+
+
+*{
+  box-sizing:border-box;
+}
+
+
+html{
+  scroll-behavior:smooth;
+}
+
+
+body{
+  margin:0;
+  padding:0;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #eee6d7 0%,
+      #dcd1ba 55%,
+      #cfc2a7 100%
+    );
+
+  color:var(--ink);
+
+  font-family:'EB Garamond',serif;
+
+  overflow-x:hidden;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+  position:fixed;
+  inset:0;
+
+  background:var(--ivory);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  z-index:9999;
+
+  transition:
+    opacity 1s ease,
+    visibility 1s ease;
+}
+
+
+.intro.hide{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+
+
+.intro-content{
+  text-align:center;
+
+  animation:
+    introAppear 1.5s ease forwards;
+}
+
+
+.intro-small{
+  font-family:'Cormorant Garamond',serif;
+
+  font-style:italic;
+
+  font-size:18px;
+
+  letter-spacing:.15em;
+
+  color:var(--rose);
+
+  margin-bottom:14px;
+}
+
+
+.intro-names{
+  font-family:'Great Vibes',cursive;
+
+  color:var(--gold);
+
+  font-size:58px;
+
+  line-height:1;
+}
+
+
+.intro-date{
+  margin-top:18px;
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:17px;
+
+  letter-spacing:.12em;
+
+  color:var(--ink);
+}
+
+
+.intro-line{
+  width:90px;
+
+  height:1px;
+
+  background:var(--gold-light);
+
+  margin:25px auto;
+}
+
+
+.intro-loading{
+  font-size:13px;
+
+  letter-spacing:.18em;
+
+  color:var(--rose);
+}
+
+
+@keyframes introAppear{
+
+  from{
+    opacity:0;
+    transform:translateY(15px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page{
+  position:relative;
+
+  max-width:680px;
+
+  margin:35px auto;
+
+  background:
+    radial-gradient(
+      circle at 10% 8%,
+      rgba(169,129,47,.06),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 90% 92%,
+      rgba(184,131,111,.07),
+      transparent 40%
+    ),
+    var(--ivory);
+
+  padding:70px 60px 70px;
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.22);
+
+  overflow:hidden;
+}
+
+
+/* =========================
+   FRAME
+========================= */
+
+.frame{
+  position:absolute;
+
+  inset:14px;
+
+  border:1px solid var(--line);
+
+  pointer-events:none;
+}
+
+
+.frame::before{
+  content:"";
+
+  position:absolute;
+
+  inset:6px;
+
+  border:1px solid var(--line);
+}
+
+
+/* =========================
+   CORNERS
+========================= */
+
+.corner{
+  position:absolute;
+
+  width:52px;
+  height:52px;
+
+  border:1.5px solid var(--gold);
+
+  opacity:.65;
+
+  z-index:2;
+}
+
+
+.corner.tl{
+  top:6px;
+  left:6px;
+
+  border-right:none;
+  border-bottom:none;
+}
+
+
+.corner.tr{
+  top:6px;
+  right:6px;
+
+  border-left:none;
+  border-bottom:none;
+}
+
+
+.corner.bl{
+  bottom:6px;
+  left:6px;
+
+  border-right:none;
+  border-top:none;
+}
+
+
+.corner.br{
+  bottom:6px;
+  right:6px;
+
+  border-left:none;
+  border-top:none;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content{
+  position:relative;
+
+  z-index:3;
+
+  text-align:center;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.kicker{
+  margin:0 0 7px;
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-style:italic;
+
+  font-size:17px;
+
+  letter-spacing:.13em;
+
+  color:var(--rose);
+
+  animation:
+    fadeUp 1s ease .2s both;
+}
+
+
+.names{
+  margin:8px 0 0;
+
+  font-family:'Great Vibes',cursive;
+
+  font-weight:400;
+
+  font-size:76px;
+
+  line-height:.95;
+
+  color:var(--gold);
+
+  animation:
+    fadeUp 1s ease .4s both;
+}
+
+
+.amp{
+  display:block;
+
+  margin:-3px 0;
+
+  font-family:'Great Vibes',cursive;
+
+  font-size:43px;
+
+  color:var(--rose);
+}
+
+
+.date-line{
+  margin:24px 0 0;
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:20px;
+
+  letter-spacing:.07em;
+
+  color:var(--ink);
+
+  animation:
+    fadeUp 1s ease .6s both;
+}
+
+
+.date-line strong{
+  font-weight:600;
+
+  color:var(--gold);
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:12px;
+
+  width:75%;
+
+  margin:28px auto;
+}
+
+
+.divider .bar{
+  height:1px;
+
+  flex:1;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      var(--gold-light)
+    );
+}
+
+
+.divider .bar.left{
+  background:
+    linear-gradient(
+      to left,
+      transparent,
+      var(--gold-light)
+    );
+}
+
+
+.diamond{
+  width:7px;
+  height:7px;
+
+  background:var(--gold);
+
+  transform:rotate(45deg);
+
+  flex-shrink:0;
+}
+
+
+/* =========================
+   INVITATION
+========================= */
+
+.invite-heading{
+  margin:0 0 20px;
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:16px;
+
+  letter-spacing:.35em;
+
+  color:var(--rose);
+
+  animation:
+    fadeUp 1s ease .8s both;
+}
+
+
+.lead{
+  max-width:480px;
+
+  margin:0 auto;
+
+  font-size:19px;
+
+  line-height:1.75;
+
+  color:var(--ink);
+
+  animation:
+    fadeUp 1s ease 1s both;
+}
+
+
+.names-inline{
+  font-family:'Cormorant Garamond',serif;
+
+  font-style:italic;
+
+  font-weight:600;
+
+  font-size:21px;
+
+  color:var(--gold);
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-section{
+  margin:42px auto 20px;
+
+  max-width:500px;
+}
+
+
+.countdown-title{
+  font-family:'Cormorant Garamond',serif;
+
+  font-style:italic;
+
+  font-size:18px;
+
+  color:var(--rose);
+
+  margin-bottom:18px;
+}
+
+
+.countdown{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:10px;
+}
+
+
+.count-box{
+  padding:13px 5px;
+
+  border-top:
+    1px solid var(--line);
+
+  border-bottom:
+    1px solid var(--line);
+
+  background:
+    rgba(255,255,255,.22);
+}
+
+
+.count-number{
+  display:block;
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:27px;
+
+  color:var(--gold);
+
+  line-height:1;
+}
+
+
+.count-label{
+  display:block;
+
+  margin-top:5px;
+
+  font-size:11px;
+
+  text-transform:uppercase;
+
+  letter-spacing:.12em;
+
+  color:var(--rose);
+}
+
+
+/* =========================
+   DETAILS
+========================= */
+
+.details{
+  margin-top:35px;
+}
+
+
+.details h2{
+  margin:0 0 28px;
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-weight:500;
+
+  font-size:24px;
+
+  letter-spacing:.1em;
+
+  color:var(--ink);
+}
+
+
+.group{
+  margin-bottom:25px;
+}
+
+
+.group .label{
+  margin-bottom:7px;
+
+  font-size:13px;
+
+  letter-spacing:.2em;
+
+  color:var(--rose);
+
+  text-transform:uppercase;
+}
+
+
+.names-list{
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:19px;
+
+  line-height:1.5;
+
+  color:var(--ink);
+}
+
+
+/* =========================
+   VENUES
+========================= */
+
+.venue-block{
+  position:relative;
+
+  max-width:470px;
+
+  margin:30px auto 0;
+
+  padding:27px 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(241,233,216,.95),
+      rgba(250,246,239,.95)
+    );
+
+  border:1px solid var(--line);
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.05);
+}
+
+
+.venue{
+  padding-bottom:23px;
+
+  margin-bottom:23px;
+
+  border-bottom:
+    1px solid
+    rgba(169,129,47,.18);
+}
+
+
+.venue:last-child{
+  margin-bottom:0;
+
+  padding-bottom:0;
+
+  border-bottom:none;
+}
+
+
+.venue-title{
+  margin-bottom:6px;
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-weight:600;
+
+  font-size:16px;
+
+  letter-spacing:.15em;
+
+  color:var(--gold);
+
+  text-transform:uppercase;
+}
+
+
+.venue-name{
+  font-family:'Cormorant Garamond',serif;
+
+  font-weight:600;
+
+  font-size:19px;
+
+  line-height:1.25;
+
+  color:var(--ink);
+}
+
+
+.venue-address{
+  margin-top:4px;
+
+  font-size:16px;
+
+  line-height:1.45;
+
+  color:var(--ink-soft);
+}
+
+
+.venue-time{
+  margin-top:5px;
+
+  font-size:15px;
+
+  font-style:italic;
+
+  color:var(--rose);
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons{
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+
+  margin-top:25px;
+}
+
+
+.btn{
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  min-width:145px;
+
+  padding:10px 17px;
+
+  border:1px solid var(--gold-light);
+
+  background:
+    rgba(255,255,255,.25);
+
+  color:var(--gold);
+
+  text-decoration:none;
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:15px;
+
+  letter-spacing:.05em;
+
+  transition:
+    background .3s ease,
+    color .3s ease,
+    transform .3s ease;
+}
+
+
+.btn:hover{
+  background:var(--gold);
+
+  color:white;
+
+  transform:translateY(-2px);
+}
+
+
+/* =====================================================
+   BOTÓN DE MÚSICA
+===================================================== */
+
+.music-button{
+
+  position:fixed;
+
+  right:20px;
+
+  bottom:20px;
+
+  width:52px;
+
+  height:52px;
+
+  border-radius:50%;
+
+  border:
+    1px solid
+    var(--gold-light);
+
+  background:
+    rgba(250,246,239,.96);
+
+  color:var(--gold);
+
+  cursor:pointer;
+
+  z-index:1000;
+
+  box-shadow:
+    0 5px 20px
+    rgba(0,0,0,.15);
+
+  font-size:20px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  transition:
+    .3s ease;
+
+}
+
+
+.music-button:hover{
+
+  transform:
+    scale(1.08);
+
+  background:
+    var(--gold);
+
+  color:white;
+
+}
+
+
+.music-button.playing{
+
+  animation:
+    musicPulse 1.5s infinite;
+
+}
+
+
+@keyframes musicPulse{
+
+  0%{
+    box-shadow:
+      0 0 0 0
+      rgba(169,129,47,.5);
+  }
+
+  70%{
+    box-shadow:
+      0 0 0 12px
+      rgba(169,129,47,0);
+  }
+
+  100%{
+    box-shadow:
+      0 0 0 0
+      rgba(169,129,47,0);
+  }
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-note{
+  margin-top:42px;
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-style:italic;
+
+  font-size:17px;
+
+  color:#75695a;
+}
+
+
+.footer-heart{
+  display:block;
+
+  margin-top:15px;
+
+  font-size:18px;
+
+  color:var(--rose);
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+
+    transform:
+      translateY(18px);
+  }
+
+  to{
+    opacity:1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:700px){
+
+  body{
+    background:
+      var(--ivory);
+  }
+
+
+  .page{
+
+    margin:0;
+
+    min-height:100vh;
+
+    width:100%;
+
+    padding:
+      58px
+      28px
+      60px;
+
+    box-shadow:none;
+
+  }
+
+
+  .frame{
+    inset:10px;
+  }
+
+
+  .frame::before{
+    inset:5px;
+  }
+
+
+  .corner{
+    width:40px;
+
+    height:40px;
+  }
+
+
+  .names{
+    font-size:58px;
+  }
+
+
+  .amp{
+    font-size:35px;
+  }
+
+
+  .date-line{
+    font-size:18px;
+
+    line-height:1.4;
+  }
+
+
+  .divider{
+    width:85%;
+
+    margin:24px auto;
+  }
+
+
+  .lead{
+    font-size:18px;
+  }
+
+
+  .countdown{
+    gap:5px;
+  }
+
+
+  .count-box{
+    padding:12px 3px;
+  }
+
+
+  .count-number{
+    font-size:23px;
+  }
+
+
+  .count-label{
+    font-size:9px;
+  }
+
+
+  .venue-block{
+    padding:23px 18px;
+  }
+
+
+  .music-button{
+
+    width:48px;
+
+    height:48px;
+
+    right:15px;
+
+    bottom:15px;
+
+  }
+
+}
+
+
+@media(max-width:400px){
+
+  .page{
+
+    padding-left:22px;
+
+    padding-right:22px;
+
+  }
+
+
+  .names{
+    font-size:51px;
+  }
+
+
+  .intro-names{
+    font-size:47px;
+  }
+
+
+  .kicker{
+    font-size:15px;
+  }
+
+
+  .invite-heading{
+    font-size:14px;
+  }
+
+
+  .venue-name{
+    font-size:18px;
+  }
+
+}
+
+
+/* =========================
+   PRINT
+========================= */
+
+@media print{
+
+  body{
+    background:white;
+  }
+
+
+  .intro,
+  .music-button,
+  .buttons,
+  .countdown-section{
+    display:none;
+  }
+
+
+  .page{
+    margin:0;
+
+    box-shadow:none;
+
+    max-width:none;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<div class="intro" id="intro">
+
+  <div class="intro-content">
+
+    <div class="intro-small">
+      El día de nuestra boda
+    </div>
+
+    <div class="intro-names">
+      Vanesa &amp; Diego Armando
+    </div>
+
+    <div class="intro-line"></div>
+
+    <div class="intro-date">
+      Sábado 14 de noviembre de 2026
+    </div>
+
+    <div class="intro-loading">
+      CON AMOR
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     AUDIO
+===================================================== -->
+
+<audio
+  id="weddingMusic"
+  loop
+  preload="auto"
+>
+
+  <source
+    src="./cancionboda.mp3"
+    type="audio/mpeg"
+  >
+
+</audio>
+
+
+<!-- =====================================================
+     BOTÓN DE MÚSICA
+===================================================== -->
+
+<button
+  class="music-button"
+  id="musicButton"
+  aria-label="Reproducir música"
+  title="Reproducir música"
+>
+
+  ♫
+
+</button>
+
+
+<!-- =====================================================
+     INVITACIÓN
+===================================================== -->
+
+<main class="page">
+
+
+  <div class="frame"></div>
+
+
+  <div class="corner tl"></div>
+
+  <div class="corner tr"></div>
+
+  <div class="corner bl"></div>
+
+  <div class="corner br"></div>
+
+
+  <div class="content">
+
+
+    <!-- HEADER -->
+
+    <p class="kicker">
+
+      El día de nuestra boda
+
+    </p>
+
+
+    <h1 class="names">
+
+      Vanesa
+
+      <span class="amp">
+        &amp;
+      </span>
+
+      Diego Armando
+
+    </h1>
+
+
+    <p class="date-line">
+
+      <strong>
+        Sábado 14 de noviembre de 2026
+      </strong>
+
+      · 1:00 pm
+
+    </p>
+
+
+    <div class="divider">
+
+      <span class="bar left"></span>
+
+      <span class="diamond"></span>
+
+      <span class="bar"></span>
+
+    </div>
+
+
+    <!-- MENSAJE -->
+
+    <p class="invite-heading">
+      ESTÁS INVITADO
+    </p>
+
+
+    <p class="lead">
+
+      Acompáñanos a celebrar el inicio
+      de esta nueva vida juntos, en un día
+      lleno de amor, familia y bendiciones.
+
+    </p>
+
+
+    <!-- COUNTDOWN -->
+
+    <section class="countdown-section">
+
+      <div class="countdown-title">
+
+        Falta poco para nuestro gran día
+
+      </div>
+
+
+      <div class="countdown">
+
+
+        <div class="count-box">
+
+          <span
+            class="count-number"
+            id="days"
+          >
+            00
+          </span>
+
+          <span class="count-label">
+            Días
+          </span>
+
+        </div>
+
+
+        <div class="count-box">
+
+          <span
+            class="count-number"
+            id="hours"
+          >
+            00
+          </span>
+
+          <span class="count-label">
+            Horas
+          </span>
+
+        </div>
+
+
+        <div class="count-box">
+
+          <span
+            class="count-number"
+            id="minutes"
+          >
+            00
+          </span>
+
+          <span class="count-label">
+            Minutos
+          </span>
+
+        </div>
+
+
+        <div class="count-box">
+
+          <span
+            class="count-number"
+            id="seconds"
+          >
+            00
+          </span>
+
+          <span class="count-label">
+            Segundos
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- DETALLES -->
+
+    <section class="details">
+
+
+      <div class="divider">
+
+        <span class="bar left"></span>
+
+        <span class="diamond"></span>
+
+        <span class="bar"></span>
+
+      </div>
+
+
+      <h2>
+        Los detalles
+      </h2>
+
+
+      <!-- PADRINOS -->
+
+      <div class="group">
+
+        <div class="label">
+          Padrinos
+        </div>
+
+        <div class="names-list">
+
+          Saúl Mercado Ríos
+          <br>
+
+          Maricela García Mendoza
+
+        </div>
+
+      </div>
+
+
+      <!-- PAPÁS DE LA NOVIA -->
+
+      <div class="group">
+
+        <div class="label">
+          Papás de la novia
+        </div>
+
+        <div class="names-list">
+
+          Cristóbal Contreras Hernández
+          <br>
+
+          Trinidad Becerril Arellano
+
+        </div>
+
+      </div>
+
+
+      <!-- PAPÁS DEL NOVIO -->
+
+      <div class="group">
+
+        <div class="label">
+          Papás del novio
+        </div>
+
+        <div class="names-list">
+
+          Noé Rojas Almeyda
+          <br>
+
+          Elvira García Mendoza
+
+        </div>
+
+      </div>
+
+
+      <!-- LUGARES -->
+
+      <div class="venue-block">
+
+
+        <!-- MISA -->
+
+        <div class="venue">
+
+          <div class="venue-title">
+            Misa
+          </div>
+
+          <div class="venue-name">
+
+            Parroquia de San Martín
+            Obispo de Tours
+
+          </div>
+
+          <div class="venue-address">
+
+            Ocoyoacac,
+            Estado de México
+
+          </div>
+
+          <div class="venue-time">
+
+            1:00 pm
+
+          </div>
+
+
+          <div class="buttons">
+
+            <a
+              class="btn"
+              href="https://www.google.com/maps/search/?api=1&query=Parroquia+de+San+Martin+Obispo+de+Tours+Ocoyoacac+Estado+de+Mexico"
+              target="_blank"
+              rel="noopener"
+            >
+
+              📍 Ver ubicación
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- RECEPCIÓN -->
+
+        <div class="venue">
+
+          <div class="venue-title">
+            Recepción
+          </div>
+
+          <div class="venue-name">
+            Salón Los Sauces
+          </div>
+
+          <div class="venue-address">
+
+            Ignacio López Rayón #12
+            <br>
+
+            Ocoyoacac,
+            Estado de México
+
+          </div>
+
+
+          <div class="buttons">
+
+            <a
+              class="btn"
+              href="https://www.google.com/maps/search/?api=1&query=Salon+Los+Sauces+Ignacio+Lopez+Rayon+12+Ocoyoacac+Estado+de+Mexico"
+              target="_blank"
+              rel="noopener"
+            >
+
+              📍 Ver ubicación
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- CONFIRMACIÓN -->
+
+      <div class="buttons">
+
+        <a
+          class="btn"
+          href="https://wa.me/7291379326?text=Hola%20Vanesa%20y%20Diego%2C%20quiero%20confirmar%20mi%20asistencia%20a%20su%20boda."
+          target="_blank"
+          rel="noopener"
+        >
+
+          💌 Confirmar asistencia
+
+        </a>
+
+      </div>
+
+
+      <!-- FOOTER -->
+
+      <p class="footer-note">
+
+        Con cariño,
+        <br>
+
+        Vanesa &amp; Diego Armando
+
+        <span class="footer-heart">
+          ♡
+        </span>
+
+      </p>
+
+
+    </section>
+
+
+  </div>
+
+</main>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =========================
+   INTRO
+========================= */
+
+window.addEventListener(
+  "load",
+  function(){
+
+    setTimeout(
+      function(){
+
+        const intro =
+          document.getElementById("intro");
+
+        intro.classList.add("hide");
+
+      },
+      1800
+    );
+
+  }
+);
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+const weddingDate =
+  new Date(
+    "November 14, 2026 13:00:00"
+  ).getTime();
+
+
+function updateCountdown(){
+
+  const now =
+    new Date().getTime();
+
+
+  const distance =
+    weddingDate - now;
+
+
+  if(distance <= 0){
+
+    document.getElementById("days")
+      .textContent = "00";
+
+    document.getElementById("hours")
+      .textContent = "00";
+
+    document.getElementById("minutes")
+      .textContent = "00";
+
+    document.getElementById("seconds")
+      .textContent = "00";
+
+    return;
+
+  }
+
+
+  const days =
+    Math.floor(
+      distance /
+      (1000 * 60 * 60 * 24)
+    );
+
+
+  const hours =
+    Math.floor(
+      (
+        distance %
+        (1000 * 60 * 60 * 24)
+      ) /
+      (1000 * 60 * 60)
+    );
+
+
+  const minutes =
+    Math.floor(
+      (
+        distance %
+        (1000 * 60 * 60)
+      ) /
+      (1000 * 60)
+    );
+
+
+  const seconds =
+    Math.floor(
+      (
+        distance %
+        (1000 * 60)
+      ) /
+      1000
+    );
+
+
+  document.getElementById("days")
+    .textContent =
+    String(days).padStart(2,"0");
+
+
+  document.getElementById("hours")
+    .textContent =
+    String(hours).padStart(2,"0");
+
+
+  document.getElementById("minutes")
+    .textContent =
+    String(minutes).padStart(2,"0");
+
+
+  document.getElementById("seconds")
+    .textContent =
+    String(seconds).padStart(2,"0");
+
+}
+
+
+updateCountdown();
+
+
+setInterval(
+  updateCountdown,
+  1000
+);
+
+
+/* =====================================================
+   MÚSICA
+===================================================== */
+
+const music =
+  document.getElementById(
+    "weddingMusic"
+  );
+
+
+const musicButton =
+  document.getElementById(
+    "musicButton"
+  );
+
+
+let musicPlaying = false;
+
+
+musicButton.addEventListener(
+  "click",
+  async function(){
+
+    try{
+
+      if(!musicPlaying){
+
+        await music.play();
+
+        musicPlaying = true;
+
+        musicButton.textContent =
+          "❚❚";
+
+        musicButton.classList.add(
+          "playing"
+        );
+
+        musicButton.setAttribute(
+          "aria-label",
+          "Pausar música"
+        );
+
+        musicButton.setAttribute(
+          "title",
+          "Pausar música"
+        );
+
+      }
+
+      else{
+
+        music.pause();
+
+        musicPlaying = false;
+
+        musicButton.textContent =
+          "♫";
+
+        musicButton.classList.remove(
+          "playing"
+        );
+
+        musicButton.setAttribute(
+          "aria-label",
+          "Reproducir música"
+        );
+
+        musicButton.setAttribute(
+          "title",
+          "Reproducir música"
+        );
+
+      }
+
+    }
+
+    catch(error){
+
+      console.error(
+        "Error al reproducir la música:",
+        error
+      );
+
+      alert(
+        "No se pudo reproducir la canción. Revisa que el archivo se llame exactamente cancionboda.mp3 y esté en la misma carpeta que invitacion.html."
+      );
+
+    }
+
+  }
+);
+
+
+/* =========================
+   CUANDO TERMINA LA CANCIÓN
+========================= */
+
+music.addEventListener(
+  "ended",
+  function(){
+
+    musicPlaying = false;
+
+    musicButton.textContent =
+      "♫";
+
+    musicButton.classList.remove(
+      "playing"
+    );
+
+  }
+);
+
+
+</script>
+
+
+</body>
+
+</html>
